@@ -1,6 +1,6 @@
 angular.module('confirmation', ['services'])
   .controller('confirmationController', function($http, $scope, menuitemsService) {
-    getOrders();
+    // getOrders();
     $scope.data = menuitemsService.getChosenList();
     $scope.lastOrder;
     $scope.sendEmail = function(data, name) {
