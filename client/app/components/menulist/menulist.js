@@ -9,11 +9,21 @@ angular.module('menulist', ['services'])
         menuitemsService.setAllMenuItems(response.data);
         console.log('menuitems endpoints data', response.data);
         // everything we need access to in the html, we're attaching to the $scope
-        categoriesService.setAllCategoryData();
-        $scope.category = categoriesService.getCurrentCategory();
-        $scope.data = categoriesService.getMenuItemsInCurrentCategory;
-        $scope.added = menuitemsService.getChosenList();
-        categoriesService.setInitialCategories();
+        if(!categoriesService.getAllCategoryData().length){
+          setTimeout(function(){
+            categoriesService.setAllCategoryData();
+            $scope.category = categoriesService.getCurrentCategory();
+            $scope.data = categoriesService.getMenuItemsInCurrentCategory;
+            $scope.added = menuitemsService.getChosenList();
+            categoriesService.setInitialCategories();
+          }, 0)
+        } else {
+          categoriesService.setAllCategoryData();
+          $scope.category = categoriesService.getCurrentCategory();
+          $scope.data = categoriesService.getMenuItemsInCurrentCategory;
+          $scope.added = menuitemsService.getChosenList();
+          categoriesService.setInitialCategories();
+        }
       }, function errorCallback(response) {
         console.log('Error getting data', response);
     })

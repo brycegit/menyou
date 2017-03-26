@@ -59,7 +59,7 @@ angular.module('services', [])
     var getMenuItemsInCurrentCategory = function() {
       return currentMenuItems;
     };
-    var getAllCategoryData= function() {
+    var getAllCategoryData = function() {
       return categoryData;
     };
 
@@ -82,7 +82,8 @@ angular.module('services', [])
       setAllCategoryData: setAllCategoryData,
       setInitialCategories: setInitialCategories,
       initialCategory: initialCategory,
-      reactToSuccessfulPost: reactToSuccessfulPost
+      reactToSuccessfulPost: reactToSuccessfulPost,
+      getAllCategoryData: getAllCategoryData
     };
   })
 
