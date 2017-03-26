@@ -36,7 +36,7 @@ var app = angular.module('app', [
       controller: 'authController'
     })
     .when('/email', {
-      templateUrl:"app/confirmation/confirmation.html",
+      templateUrl:"app/components/confirmation/confirmation.html",
       controller: 'confirmationController'
     })
     .when('/myorders', {
