@@ -50,6 +50,7 @@ The display lists the Order ID, customer name, the menu items associated with th
 - Postgresql 9.4.x
 
 ## Development
+![diagram](https://lh6.googleusercontent.com/j8TqzNwpx2nAxiWVF8M4vYO3050gllOmvtSNMtXczxBeAkdpWpcJOZ3_7jb8QxaSO4-2A3clbKhcRPw=w2454-h1360-rw)
 
 ### Installing Dependencies
 
